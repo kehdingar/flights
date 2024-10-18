@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Departure from './Departure';
+import Return from './Return';
 
 const FlightSearch = () => {
   const navigate = useNavigate();
@@ -330,6 +331,7 @@ const FlightSearch = () => {
 
   <div>
     {location.pathname === '/departure' && <Departure />}
+    {location.pathname === '/return' && <Return />}
   </div>
 </div>
 
