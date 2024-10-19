@@ -39,7 +39,6 @@ const Return = () =>{
     return (
         <div>
         <p className="max-w-2xl mx-auto p-4 font-bold text-left">Booked Flights</p>
-        {console.log("Booked:", [bookedFlights][0])}
           {bookedFlights !== null ? (
         bookedFlights[0].legs.map((flight) => (
           <div key={flight.id} className="max-w-2xl mx-auto p-4">

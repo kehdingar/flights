@@ -20,7 +20,7 @@ import { useNavigate } from 'react-router-dom';
     return `${hours}:${formattedMinutes} ${ampm}`;
   };
 
-  
+
   const Departure = () => {
       const location = useLocation();
       const navigate = useNavigate();

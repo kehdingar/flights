@@ -35,7 +35,7 @@ const FlightSearch = () => {
           locale: 'en-US'
         },
         headers: {
-          'X-RapidAPI-Key': '9d957b647dmsh61b8df5bedf7854p16d406jsn69ff88bf3b76',
+          'X-RapidAPI-Key': '31c1ad3cd0msh37c812e0c39ed57p108039jsn912844fbbc1c',
           'X-RapidAPI-Host': 'sky-scrapper.p.rapidapi.com',
         },          
       });
@@ -69,7 +69,7 @@ const FlightSearch = () => {
           locale: 'en-US'
         },
         headers: {
-          'X-RapidAPI-Key': '9d957b647dmsh61b8df5bedf7854p16d406jsn69ff88bf3b76',
+          'X-RapidAPI-Key': '31c1ad3cd0msh37c812e0c39ed57p108039jsn912844fbbc1c',
           'X-RapidAPI-Host': 'sky-scrapper.p.rapidapi.com',
         },        
       });
@@ -122,7 +122,7 @@ const FlightSearch = () => {
           countryCode: 'US',
         },
         headers: {
-          'X-RapidAPI-Key': '9d957b647dmsh61b8df5bedf7854p16d406jsn69ff88bf3b76',
+          'X-RapidAPI-Key': '31c1ad3cd0msh37c812e0c39ed57p108039jsn912844fbbc1c',
           'X-RapidAPI-Host': 'sky-scrapper.p.rapidapi.com',
         },
       });
@@ -308,8 +308,10 @@ const FlightSearch = () => {
       className="border rounded-md p-3 w-full" 
     />
   </div>
+        
         {
         dataError && (
+          
         Object.entries(dataError).map(([key, value]) => (
           <p key={key} className="bg-red-500 text-white text-center p-1 block rounded-md">Error: {value} {key}</p>
         ))
