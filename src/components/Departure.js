@@ -27,17 +27,29 @@ import { useNavigate } from 'react-router-dom';
       const flights = location.state?.flights || []; 
       const itineraries = location.state?.itineraries || []; 
       const airlineLogos = location.state?.airlineLogos || [];  
+      const returnDate = location.state?.returnDate || null;  
       console.log("FLIGHTS",flights)
 
       const handleSelectDepartureFlight = (flight) => {
-  
-        navigate('/return', {
-          state: {
-            selectedDepartureFlight: [flight],
-            itineraries: itineraries,
-            airlineLogos: airlineLogos,
-          }
-        });        
+          console.log("return:",returnDate)
+        if(returnDate != null){
+
+          navigate('/return', {
+            state: {
+              selectedDepartureFlight: [flight],
+              itineraries: itineraries,
+              airlineLogos: airlineLogos,
+            }
+          });        
+        }else{
+          navigate('/book', {
+            state: {
+              bookedFlights: [flight],
+              itineraries: itineraries,
+              airlineLogos: airlineLogos,
+            }
+          });      
+        }
     
       };
 

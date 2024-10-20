@@ -11,8 +11,8 @@ const FlightSearch = () => {
   const [destinationSkyId, setDestinationSkyId] = useState('DXB');
   const [originEntityId, setOriginEntityId] = useState('128668198');
   const [destinationEntityId, setDestinationEntityId] = useState('95673506');
-  const [date, setDate] = useState();
-  const [returnDate, setReturnDate] = useState();
+  const [date, setDate] = useState(null);
+  const [returnDate, setReturnDate] = useState(null);
   const [cabinClass, setCabinClass] = useState('economy');
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
@@ -136,13 +136,15 @@ const FlightSearch = () => {
 
         const flightsData = response.data;
         const itinerariesData = response.data.data.itineraries;
-    
+        console.log("RETURN DATe:",returnDate)
+        console.log("DEPARTURE:",date)
         // Navigate to departure page after fetching flights
         navigate('/departure', {
           state: {
             flights: flightsData,
             itineraries: itinerariesData,
             airlineLogos: logoMap,
+            returnDate: returnDate
           }
         });
       }else{
